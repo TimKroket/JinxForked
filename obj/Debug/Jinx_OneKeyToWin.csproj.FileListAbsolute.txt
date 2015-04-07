@@ -1,1 +1,2 @@
 C:\Users\Jean-Marie\Desktop\Jinx\bin\Release\Jinx.exe.config
+C:\Users\Jean-Marie\Desktop\Jinx\JinxForked\bin\Release\Jinx.exe.config
