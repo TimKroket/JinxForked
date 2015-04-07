@@ -127,16 +127,9 @@ namespace Jinx
 
         private static void Game_OnGameUpdate(EventArgs args)
         {
-
-            if (Config.Item("timKroket1").GetValue<bool>())
-            {
-                Game.PrintChat("<font color=\"#00ff54\">TimKroketAutoLevelUp is UP !</font>");
-                LevelUpSpells();//CheckAutoLeveling
-            }
-            else
-            {
-                Game.PrintChat("<font color=\"#ff001e\">TimKroketAutoLevelUp is not UP !</font>");
-            }
+            //timKroket not rocket haha
+            if (Config.Item("timKroket1").GetValue<bool>())LevelUpSpells();
+            //timKroket not rocket haha
             ManaMenager();
             if (Orbwalker.ActiveMode == Orbwalking.OrbwalkingMode.Mixed || Orbwalker.ActiveMode == Orbwalking.OrbwalkingMode.LaneClear || Orbwalker.ActiveMode == Orbwalking.OrbwalkingMode.LastHit)
                 Farm = true;
