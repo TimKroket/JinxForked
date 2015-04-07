@@ -3,3 +3,5 @@
 # JinxForked
 A Lazy version of https://github.com/OneKeyToWin/LeagueRepo/tree/master/Jinx made by Sebastiank1
 Try it out now :)
+Just Activate it :)
+![alt tag](http://puu.sh/h4KJi/54c739d29d.jpg)
