@@ -546,6 +546,9 @@ namespace Jinx
         {
             if (Config.Item("pots").GetValue<bool>() && !ObjectManager.Player.InFountain() && !ObjectManager.Player.HasBuff("Recall"))
             {
+                
+                   //If Potion is ready and Player is Recalling  and no enemies closer we dont use the pot - TimKroket
+                if (Potion.IsReady() && ObjectManager.Player.CountEnemiesInRange(700) > 0 && Player.HasBuff("Recall"))return;
                 if (Potion.IsReady() && !ObjectManager.Player.HasBuff("RegenerationPotion", true))
                 {
                     if (ObjectManager.Player.CountEnemiesInRange(700) > 0 && ObjectManager.Player.Health + 200 < ObjectManager.Player.MaxHealth)
@@ -553,6 +556,8 @@ namespace Jinx
                     else if (ObjectManager.Player.Health < ObjectManager.Player.MaxHealth * 0.6)
                         Potion.Cast();
                 }
+                //Dont wasting Mana potions - TimKroket
+                if (ManaPotion.IsReady() && ObjectManager.Player.CountEnemiesInRange(700) > 0 && Player.HasBuff("Recall") ) return;
                 if (ManaPotion.IsReady() && !ObjectManager.Player.HasBuff("FlaskOfCrystalWater", true))
                 {
                     if (ObjectManager.Player.CountEnemiesInRange(1200) > 0 && ObjectManager.Player.Mana < RMANA + WMANA + EMANA + 20)
